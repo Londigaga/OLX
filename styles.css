@@ -168,3 +168,64 @@ form button:hover {
 .service-item p {
     font-size: 1.2em;
 }
+
+.shop {
+    padding: 50px 20px;
+}
+
+.shop h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1.2em;
+}
+
+.product-item .price {
+    font-size: 1.5em;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+.product-item button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: #e64a19;
+}
