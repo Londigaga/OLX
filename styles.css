@@ -124,3 +124,25 @@ form button {
 form button:hover {
     background-color: #e64a19;
 }
+.faq {
+    padding: 50px 20px;
+}
+
+.faq h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.faq-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1.2em;
+}
