@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - OLX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <h1>Checkout</h1>
+            <form id="checkout-form" action="process_checkout.php" method="post">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                <button type="submit">Checkout</button>
+            </form>
+            <div id="checkout-message" class="checkout-message"></div>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript for displaying checkout message
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var checkoutMessage = document.getElementById('checkout-message');
+            checkoutMessage.innerHTML = "<p>Thank you! Your order will be processed shortly.</p>";
+        });
+    </script>
+</body>
+</html>
