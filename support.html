@@ -1,72 +1,38 @@
-.support {
-    padding: 50px 20px;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - OLX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop Products</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.support h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.support p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #ff5722;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #e64a19;
-}
-
-.faq {
-    padding: 50px 20px;
-}
-
-.faq h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.faq-item {
-    margin-bottom: 30px;
-}
-
-.faq-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1.2em;
-}
+    <main>
+        <section class="support">
+            <h1>Support</h1>
+            <p>If you need any assistance, feel free to reach out to our support team.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
