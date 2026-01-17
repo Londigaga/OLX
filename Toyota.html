@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Etios Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e10600 0%, #9c0000 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .car-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e10600;
+        }
+
+        .car-title h2 {
+            font-size: 2.5rem;
+            color: #e10600;
+            margin-bottom: 0.5rem;
+        }
+
+        .car-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .car-image {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .car-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-info {
+            padding: 1.5rem;
+        }
+
+        .image-info h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-size: 1.4rem;
+        }
+
+        .image-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e10600;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .location-link:hover {
+            background-color: #9c0000;
+        }
+
+        .features {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .features h3 {
+            color: #e10600;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature i {
+            background-color: #f9eaea;
+            color: #e10600;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .feature h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .car-title h2 {
+                font-size: 2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .features {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <i class="fas fa-car logo"></i>
+            <h1>Auto Showcase</h1>
+        </div>
+        <p class="tagline">Explore the finest automotive engineering with detailed showcases and interactive galleries</p>
+    </header>
+
+    <main class="container">
+        <div class="car-title">
+            <h2>Toyota Etios</h2>
+            <p>The Toyota Etios is a reliable, fuel-efficient compact sedan designed for comfort and practicality, offering exceptional value for everyday driving.</p>
+        </div>
+
+        <div class="gallery-container">
+            <!-- Car Picture 1 -->
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba5338fe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Toyota Etios Front View">
+                <div class="image-info">
+                    <h3>Elegant Front Design</h3>
+                    <p>The Toyota Etios features a sleek and modern front design with a distinctive grille and sharp headlights.</p>
+                </div>
+            </div>
+
+            <!-- Car Picture 2 -->
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Toyota Etios Interior">
+                <div class="image-info">
+                    <h3>Spacious Interior</h3>
+                    <p>Experience comfort with the Etios's roomy cabin and ergonomically designed interior.</p>
+                    <a href="https://www.toyotabharat.com/showroom/etios/" target="_blank" class="location-link">
+                        <i class="fas fa-map-marker-alt"></i> Explore Official Page
+                    </a>
+                </div>
+            </div>
+
+            <!-- Car Picture 3 -->
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Toyota Etios Side View">
+                <div class="image-info">
+                    <h3>Sleek Side Profile</h3>
+                    <p>The side profile showcases the Etios's aerodynamic design and balanced proportions.</p>
+                </div>
+            </div>
+
+            <!-- Car Picture 4 -->
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Toyota Etios Dashboard">
+                <div class="image-info">
+                    <h3>Modern Dashboard</h3>
+                    <p>The dashboard features intuitive controls and a driver-focused layout for enhanced convenience.</p>
+                    <a href="https://www.google.com/maps/search/toyota+showroom+near+me/" target="_blank" class="location-link">
+                        <i class="fas fa-map-marker-alt"></i> Find Nearby Showrooms
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h3>Key Features of Toyota Etios</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-gas-pump"></i>
+                    <div>
+                        <h4>Fuel Efficient</h4>
+                        <p>Delivers excellent mileage with both petrol and diesel engine options.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <div>
+                        <h4>Reliable Performance</h4>
+                        <p>Proven Toyota engineering ensures dependable performance in all conditions.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>Spacious Cabin</h4>
+                        <p>Ample legroom and headroom for five passengers with comfortable seating.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Safety Features</h4>
+                        <p>Equipped with dual airbags, ABS, and reinforced body structure for protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><i class="fas fa-car"></i> Toyota Etios Showcase Website</p>
+            <p>Explore more about Toyota vehicles and find your nearest dealership</p>
+            <div class="copyright">
+                <p>© 2023 Auto Showcase. All images are for demonstration purposes only.</p>
+                <p>Toyota Etios is a trademark of Toyota Motor Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactivity to image cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const carImages = document.querySelectorAll('.car-image');
+            
+            carImages.forEach(image => {
+                image.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                image.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Animate features on scroll
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe feature elements
+            const features = document.querySelectorAll('.feature');
+            features.forEach(feature => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                feature.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(feature);
+            });
+        });
+    </script>
+</body>
+</html>
